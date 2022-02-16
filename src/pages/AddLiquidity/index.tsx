@@ -178,6 +178,9 @@ export default function AddLiquidity({
         deadlineFromNow
       ]
       value = BigNumber.from((tokenBIsETH ? parsedAmountB : parsedAmountA).raw.toString())
+      console.log("################################## ETH ################################################")
+      console.log("### 182 /src/pages/AddLiquidity/index.tsx ### onAdd(): args : "+args +"/ value :"+value)
+      console.log("##################################################################################")
     } else {
       estimate = router.estimateGas.addLiquidity
       method = router.addLiquidity
@@ -192,6 +195,9 @@ export default function AddLiquidity({
         deadlineFromNow
       ]
       value = null
+      console.log("################################## NOT ETH ################################################")
+      console.log("### 199 /src/pages/AddLiquidity/index.tsx ### onAdd():  args : "+args +"/ value :"+value)
+      console.log("##################################################################################")
     }
 
     setAttemptingTxn(true)
